@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import React from 'react'
 
 const Testimonial = () => {
@@ -6,10 +7,11 @@ const Testimonial = () => {
     <div className='w-full my-8 p-8 md:px-16 flex items-center justify-center flex-col md:flex-row bg-[lavender] min-h-[400px] gap-6'>
     <div className='border-purple-800 w-full md:w-[50%] relative'>
                 <div className='absolute top-0 left-0 right-0 bottom-0 bg-black/50 z-[-1]'></div>
-                <img
+                <Image
                     src="https://images.unsplash.com/photo-1522529599102-193c0d76b5b6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80"
                     alt=""
                     className="object-cover w-full h-full rounded-lg relative"
+                    layout='responsive'
                 />
             </div>
         <div className='flex flex-col gap-2 items-center justify-evenly'>

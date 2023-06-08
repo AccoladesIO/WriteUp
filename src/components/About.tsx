@@ -1,4 +1,5 @@
 import React from 'react'
+import Image from 'next/image'
 import {BsGraphUpArrow, BsPeople, BsNewspaper} from 'react-icons/bs'
 
 const About = () => {
@@ -11,10 +12,11 @@ const About = () => {
             </div>
             <div className='border-purple-800 w-full md:w-[40%] h-full relative'>
                 {/* <div className='absolute top-0 left-0 right-0 bottom-0 bg-black/50 z-[2]'></div> */}
-                <img
+                <Image
                     src="https://images.unsplash.com/photo-1488190211105-8b0e65b80b4e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80"
                     alt=""
                     className="object-cover w-full h-full rounded-md"
+                    layout='responsive'
                 />
             </div>
         </div>
