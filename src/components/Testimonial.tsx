@@ -15,7 +15,7 @@ const Testimonial = () => {
                 />
             </div>
         <div className='flex flex-col gap-2 items-center justify-evenly'>
-            <p>"WriteUp has become an integral part of my online experience. As a user of this incredible blogging platform, I have discovered a vibrant community of individuals who are passionate about sharing their ideas and engaging in thoughtful discussions.”</p>
+            <p>&ldquo;WriteUp has become an integral part of my online experience. As a user of this incredible blogging platform, I have discovered a vibrant community of individuals who are passionate about sharing their ideas and engaging in thoughtful discussions.&rdquo;</p>
             <span className='w-full text-left mt-8'><em> Ononobi Praise,</em> software developer, WriteUp. <br />
             <button className='px-8 py-2 border-none bg-purple-800 text-white hover:bg-white hover:text-purple-800 ease-in-out duration-300 hover:font-bold rounded-sm mt-6'>Join WriteUp</button>
             </span>
