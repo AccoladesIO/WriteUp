@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import React, { useState, useEffect } from 'react'
 import { AiOutlineClose } from 'react-icons/ai'
-import {BiMenuAltRight } from 'react-icons/bi'
+import {RiMenu3Fill } from 'react-icons/ri'
 
 const Navbar = () => {
 
@@ -54,7 +54,7 @@ const Navbar = () => {
                 {/* Mobile button */}
                 <div className='block sm:hidden z-10'>
                     {
-                        !nav && <BiMenuAltRight size={20} onClick={handleChange} style={{ color: `${textColor}` }} />
+                        !nav && <RiMenu3Fill size={20} onClick={handleChange} style={{ color: `${textColor}` }} />
                     }
                 </div>
                 {/* Mobile Menu */}
