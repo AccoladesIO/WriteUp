@@ -17,6 +17,8 @@ const About = () => {
                     alt=""
                     className="object-cover w-full h-full rounded-md"
                     layout='responsive'
+                    width={400}
+                    height={400}
                 />
             </div>
         </div>

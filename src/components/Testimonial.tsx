@@ -12,6 +12,8 @@ const Testimonial = () => {
                     alt=""
                     className="object-cover w-full h-full rounded-lg relative"
                     layout='responsive'
+                    width={400}
+                    height={400}
                 />
             </div>
         <div className='flex flex-col gap-2 items-center justify-evenly'>

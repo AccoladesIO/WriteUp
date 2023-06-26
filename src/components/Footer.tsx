@@ -10,6 +10,8 @@ const Footer = () => {
       alt=""
       className="absolute inset-0 object-cover w-full h-full"
       layout='responsive'
+      width={400}
+      height={400}
     />
   </div>
 
