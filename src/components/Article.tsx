@@ -25,7 +25,7 @@ function Article() {
                         <div className='flex flex-col justify-center'>
                             {/* author column and post details */}
                             <div>Accolades</div>
-                            <div className='flex gap-[.2rem] text-gray-500'>
+                            <div className='flex gap-[.2rem] text-gray-500 flex-wrap'>
                                 {/* post deets */}
                                 <span>June 15 * 7 min read</span> <span className='flex items-center text-purple-700'> <AiFillPlayCircle /> Listen</span>
                             </div>

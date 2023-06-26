@@ -3,7 +3,7 @@ import Logo from '../../public/next.svg'
 import { HiOutlineHome } from 'react-icons/hi'
 import { FiBell } from 'react-icons/fi'
 import { BiBookmarks } from 'react-icons/bi'
-import { RiArticleLine } from 'react-icons/ri'
+import { RiArticleLine, RiStackshareLine } from 'react-icons/ri'
 import { BsPencilSquare } from 'react-icons/bs'
 import Image from 'next/image'
 import person from '../../public/person.jpg'
@@ -19,7 +19,7 @@ const ReadersNav = ({children}: ReadersNavProps) => {
         <div className='w-[5rem] h-screen flex flex-col justify-between items-center p-4 fixed'>
             <Link href={'/'} >
                 <div className='cursor-pointer '>
-                    <p className='text-[20px] font-bold text-purple-800 p-8 w-full flex items-center justify-center'>WriteUp</p>
+                    <p className='text-[20px] font-bold text-purple-800 p-8 w-full flex items-center justify-center'><RiStackshareLine/> </p>
                 </div>
             </Link>
             <div className='flex-1 flex flex-col justify-center items-center gap-6 text-2xl text-purple-400'>
