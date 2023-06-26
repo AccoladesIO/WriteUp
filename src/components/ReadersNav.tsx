@@ -16,7 +16,7 @@ type ReadersNavProps = {
 const ReadersNav = ({children}: ReadersNavProps) => {
     return (
         <div className="flex">
-        <div className='w-[5rem] h-screen flex flex-col justify-between items-center p-4 fixed'>
+        <div className=' w-[3rem] sm:w-[5rem] h-screen flex flex-col justify-between items-center p-4 fixed'>
             <Link href={'/'} >
                 <div className='cursor-pointer '>
                     <p className='text-[20px] font-bold text-purple-800 p-8 w-full flex items-center justify-center'><RiStackshareLine/> </p>
@@ -39,7 +39,7 @@ const ReadersNav = ({children}: ReadersNavProps) => {
             </div>
         </div>
 
-        <main className="ml-20 w-full">{children}</main>
+        <main className="sm:ml-20 ml-12 w-full">{children}</main>
         </div>
     )
 }
