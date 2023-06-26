@@ -31,7 +31,7 @@ const Testimonial = () => {
         <div className='w-[200px] h-[200px] sm:w-full'>
 
         </div>
-        <div className='flex flex-col gap-2 items-center justify-evenly'>
+        <div className='flex flex-col gap-2 items-center justify-evenly w-full'>
             <h2 className='text-3xl font-bold mb-5 text-left'>Write, read and connect with great minds on chatter</h2>
             <span className='w-full text-left mt-8'>
                 <p>Share people your great ideas, and also read write-ups based on your interests. connect with people of same interests and goals  </p>
