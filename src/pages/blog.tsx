@@ -9,7 +9,7 @@ import { useContext } from 'react'
 import { WriteUpContext } from '../../context/WriteUpContext'
 
 
-const blog = () => {
+const Blog = () => {
   const {posts, users} = useContext(WriteUpContext)
 
   console.log(users, 'users exists') 
@@ -33,4 +33,4 @@ const blog = () => {
   )
 }
 
-export default blog
+export default Blog
