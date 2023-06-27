@@ -28,9 +28,9 @@ const PostCard = ({ post }: postCardProps) => {
     : '';
 
   return (
-    <div className='flex justify-between items-start gap-3 flex-col-reverse sm:flex-row p-4 mb-4'>
+    <div className='flex justify-between items-center gap-3 flex-col-reverse sm:flex-row p-4 mb-4'>
       <Link href={`/post/${post.id}`}>
-        <div className='max-w-[1024px] mx-auto p-8 mt-4 flex flex-col justify-center items-start text-left border'>
+        <div className='max-w-[1024px] mx-auto p-8 mt-4 flex flex-col justify-center items-start text-left border gap-3'>
           <div className='flex items-center justify-center gap-2 text-left'>
             <div className=' w-[2.4rem] h-[2.4rem] rounded-full overflow-hidden place-items-center border border-purple-400'>
               <Image src={post.data.imageUrl} alt='/' className='object-cover' />
@@ -39,21 +39,22 @@ const PostCard = ({ post }: postCardProps) => {
           </div>
           <h1 className='text-2xl font-bold text-left mt-4'>{post?.data?.title}</h1>
           <p className='text-[16px] font-light text-gray-400 text-left mt-2'>{post?.data?.brief}</p>
-          <div className='text-sm text-gray-400 mt-4 text-left'>
+          <div className='text-sm text-gray-400 mt-4 text-left flex-wrap'>
             {formattedDate} * {post?.data.postLength} mins read *{' '}
             <span className='text-sm text-purple-800 bg-purple-200 rounded-md p-2 '>{post?.data?.category}</span>
           </div>
         </div>
       </Link>
 
-      <div className='flex justify-center items-center max-w-[400px] mx-auto border border-purple-300 mt-4 placeholder:'>
-        <Image
-          src={`https://res.cloudinary.com/demo/image/fetch/${post.data.bannerImage}`}
-          alt='/'
-          className='object-cover'
-          width={450}
-          height={230}
-        />
+      <div className='flex justify-center items-start sm:items-center w-[400px] sm:w-[200px] mx-auto border border-purple-300 mt-4 h-[200px] relative'>
+      <Image
+  src={`https://res.cloudinary.com/demo/image/fetch/${post.data.bannerImage}`}
+  alt="Banner Image"
+  height={100}
+  width={100}
+  className="object-cover"
+  layout="fill"
+/>
       </div>
     </div>
   );
