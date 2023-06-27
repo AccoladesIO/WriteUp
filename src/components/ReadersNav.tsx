@@ -18,8 +18,8 @@ const ReadersNav = ({children}: ReadersNavProps) => {
         <div className="flex">
         <div className=' w-[3rem] sm:w-[5rem] h-screen flex flex-col justify-between items-center p-4 fixed'>
             <Link href={'/'} >
-                <div className='cursor-pointer '>
-                    <p className='text-[20px] font-bold text-purple-800 p-8 w-full flex items-center justify-center'><RiStackshareLine/> </p>
+                <div className='cursor-pointer  '>
+                    <p className='bg-purple-200 rounded-[5px] text-[20px] font-bold text-purple-800 p-2 w-full flex items-center justify-center'><RiStackshareLine/> </p>
                 </div>
             </Link>
             <div className='flex-1 flex flex-col justify-center items-center gap-6 text-2xl text-purple-400'>
@@ -39,7 +39,7 @@ const ReadersNav = ({children}: ReadersNavProps) => {
             </div>
         </div>
 
-        <main className="sm:ml-20 ml-12 w-full">{children}</main>
+        <main className="sm:ml-20 ml-10 w-full">{children}</main>
         </div>
     )
 }

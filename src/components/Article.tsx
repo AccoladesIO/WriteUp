@@ -10,7 +10,7 @@ import { HiOutlineLink } from 'react-icons/hi'
 
 function Article() {
     return (
-        <section className='flex items-start justify-center flex-[3] border-l border-r h-screen'>
+        <section className='flex items-start justify-center flex-[3] sm:border-l sm:border-r h-screen'>
             {/* wrapper */}
             <div className='h-screen overflow-scroll p-8 w-full'>
                 {/* content */}

@@ -37,7 +37,7 @@ const recommendedPosts = [
 
 const Recommendation = () => {
     return (
-        <div className='h-screen min-w-[10rem] max-w-[30rem] flex-[1.2] p-8'>
+        <div className='h-screen min-w-[10rem] max-w-[30rem] flex-[1.2] p-8'> 
             <div className='flex items-center justify-center text-sm bg-purple-200 text-purple-800 my-[2rem] py-[.6rem] rounded-full'>Get Unlimited Access</div>
             <div className='flex items-center gap-[.6rem] h-[2.6rem] border px-[1rem] rounded-full'>
                 <AiOutlineSearch />
