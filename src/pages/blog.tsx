@@ -5,8 +5,15 @@ import Navbar from '@/components/Navbar'
 import PostCard from '@/components/PostCard'
 import Head from 'next/head'
 import React from 'react'
+import { useContext } from 'react'
+import { WriteUpContext } from '../../context/WriteUpContext'
+
 
 const blog = () => {
+  const {posts, users} = useContext(WriteUpContext)
+
+  console.log(users, 'users exists') 
+  console.log(posts, 'Posts exists')
   return (
     <>
       <Heads title='Blog | WriteUp' content='Read the top stories for today' />
@@ -14,14 +21,11 @@ const blog = () => {
       <Hero heading={'Stay Curious'} message={'Discover stories, thinking , and expertise from writers on any topic.'} ></Hero>
 
       <div>
-      <PostCard />
-      <PostCard />
-      <PostCard />
-      <PostCard />
-      <PostCard />
-      <PostCard />
-      <PostCard />
-      <PostCard />
+        {
+          posts.map((post: any) =>(
+            <PostCard  post={post} key={post.id}/>
+          ))
+        }
       </div>
 
       <Footer />
