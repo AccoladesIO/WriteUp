@@ -1,6 +1,7 @@
 import React, { useContext } from 'react'
 import { useRouter } from 'next/router';
 import { WriteUpContext } from '../../context/WriteUpContext';
+import { ToastContainer } from 'react-toastify';
 
 type Herotype = {
     heading: string,
@@ -30,6 +31,7 @@ const Hero = (props: Herotype) => {
             <button onClick={handleRoute} className='px-8 py-2 border-none bg-purple-800 text-white hover:bg-white hover:text-purple-800 ease-in-out duration-300 hover:font-bold rounded-sm'>Get Started</button>
           )
         }
+                <ToastContainer />
       </div>
     </div>
   )

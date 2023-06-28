@@ -15,8 +15,10 @@ const PostCard = ({ post }: postCardProps) => {
 
   useEffect(() => {
     const getAuthorData = async () => {
+      console.log((await getDoc(doc(db, 'users', post.data.author))).data(), 'update')
       setAuthorData((await getDoc(doc(db, 'users', post.data.author))).data());
     };
+    console.log(authorData)
     getAuthorData();
   }, [post]);
 
@@ -32,10 +34,10 @@ const PostCard = ({ post }: postCardProps) => {
       <Link href={`/post/${post.id}`}>
         <div className='max-w-[1024px] mx-auto p-8 mt-4 flex flex-col justify-center items-start text-left border gap-3'>
           <div className='flex items-center justify-center gap-2 text-left'>
-            <div className=' w-[2.4rem] h-[2.4rem] rounded-full overflow-hidden place-items-center border border-purple-400'>
-              <Image src={post.data.imageUrl} alt='/' className='object-cover' />
+            <div className=' w-[2.4rem] h-[2.4rem] rounded-full overflow-hidden place-items-center border border-purple-400 relative'>
+              <Image src={`https://res.cloudinary.com/demo/image/fetch/${authorData?.image}`} alt='/' className='object-cover' layout='fill'/>
             </div>
-            <span className='text-[16px] leading-3 font-bold'>{post?.data?.author.toUpperCase()}</span>
+            <span className='text-[16px] leading-3 font-bold'>{authorData?.name.toUpperCase()}</span>
           </div>
           <h1 className='text-2xl font-bold text-left mt-4'>{post?.data?.title}</h1>
           <p className='text-[16px] font-light text-gray-400 text-left mt-2'>{post?.data?.brief}</p>
