@@ -68,21 +68,30 @@ const WriteProvider = ({ children }) => {
     router.push('/auth');
   };
 
+
   const handleUserAuth = async () => {
-    const res = await signInWithPopup(auth, provider)
-    const user = res.user
-    setCurrUser(user)
-    addUserToFirebase(user)
-    
-    // Redirect to dashboard after successful sign-in
-    router.push('/');
-    
-    toast('Sign in Successful, redirecting you to home', {
-      position: toast.POSITION.TOP_CENTER
-    })
-
-  }
-
+    try {
+      const res = await signInWithPopup(auth, provider);
+      const user = res.user;
+      setCurrUser(user);
+      addUserToFirebase(user);
+  
+      // Redirect to dashboard after successful sign-in
+      router.push('/');
+  
+      // Display toast notification
+      toast.success('Sign in successful, redirecting you to home', {
+        position: toast.POSITION.TOP_CENTER
+      });
+    } catch (error) {
+      // Handle sign-in error
+      console.error('Error signing in:', error);
+      toast.error('Sign in failed. Please try again.', {
+        position: toast.POSITION.TOP_CENTER
+      });
+    }
+  };
+  
   const addUserToFirebase = async (user) => {
     await setDoc(doc(db, 'users', user?.email), {
       email: user.email,
