@@ -160,31 +160,31 @@ const Footer = () => {
 
       <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
         <div>
-          <p className="font-medium text-gray-900">Services</p>
+          <p className="font-medium text-gray-900">Explore</p>
 
           <nav aria-label="Footer Navigation - Services" className="mt-6">
             <ul className="space-y-4 text-sm">
               <li>
                 <Link href="#" className="text-gray-700 transition hover:opacity-75">
-                  1on1 Coaching
+                  Community
                 </Link>
               </li>
 
               <li>
                 <Link href="#" className="text-gray-700 transition hover:opacity-75">
-                  Company Review
+                  Trending Blogs
                 </Link>
               </li>
 
               <li>
                 <Link href="#" className="text-gray-700 transition hover:opacity-75">
-                  Accounts Review
+                  WriteUp for developers
                 </Link>
               </li>
 
               <li>
                 <Link href="#" className="text-gray-700 transition hover:opacity-75">
-                  HR Consulting
+                  Official Doc
                 </Link>
               </li>
 
@@ -216,7 +216,7 @@ const Footer = () => {
 
               <li>
                 <Link href="#" className="text-gray-700 transition hover:opacity-75">
-                  Accounts Review
+                  Join Discord
                 </Link>
               </li>
             </ul>
@@ -250,7 +250,7 @@ const Footer = () => {
         </nav>
 
         <p className="mt-8 text-xs text-gray-500 sm:mt-0">
-          &copy; 2022. Company Name. All rights reserved.
+          &copy; 2022. WriteUp. All rights reserved.
         </p>
       </div>
     </div>
