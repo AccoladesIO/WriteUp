@@ -1,11 +1,14 @@
 import CommingSoon from '@/components/CommingSoon'
+import ReadersNav from '@/components/ReadersNav'
 import React from 'react'
 
 const Bookmarks = () => {
   return (
-    <div className='w-full h-screen'>Bookmarks
+    <ReadersNav>
+    <div className='w-full h-screen flex items-center justify-center'>Bookmarks
         <CommingSoon />
     </div>
+    </ReadersNav>
   )
 }
 
