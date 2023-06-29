@@ -23,7 +23,7 @@ const Index = () => {
             {currUser?.displayName}
           </p>
           <div className='w-16 h-16 rounded-full border border-purple-700'>
-              <Image src={`https://res.cloudinary.com/demo/image/fetch/${currUser?.photoURL}`} width={100} height={100} className='object-cover rounded-full' />
+              <Image src={`https://res.cloudinary.com/demo/image/fetch/${currUser?.photoURL}`} alt='/' width={100} height={100} className='object-cover rounded-full' />
           </div>
         </nav>
         <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 w-[95%] mx-auto mt-12 gap-4'>
@@ -74,7 +74,7 @@ const Index = () => {
         </div>
         <div className='grid grid-cols-1 sm:grid-cols-2 w-[95%] mx-auto mt-12 gap-4'>
           <div className='bg-white flex flex-col items-start justify-center gap-4 rounded-sm p-4'>
-            
+
           </div>
           <div className='bg-white flex flex-col items-start justify-center gap-4 rounded-sm p-4'></div>
         </div>
