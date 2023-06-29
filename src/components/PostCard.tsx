@@ -22,7 +22,7 @@ const PostCard = ({ post }: postCardProps) => {
     };
     console.log(authorData)
     getAuthorData();
-  }, [post]);
+  }, [post.data.author]);
 
   const formattedDate = post.data.postedOn
     ? new Date(post.data.postedOn).toLocaleString('en-US', {

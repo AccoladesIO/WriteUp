@@ -3,7 +3,7 @@ import Logo from '../../public/next.svg'
 import { HiOutlineHome, HiOutlineLogout } from 'react-icons/hi'
 import { FiBell } from 'react-icons/fi'
 import { BiBookmarks } from 'react-icons/bi'
-import { RiArticleLine, RiStackshareLine } from 'react-icons/ri'
+import { RiArticleLine, RiDashboardFill } from 'react-icons/ri'
 import { BsPencilSquare } from 'react-icons/bs'
 import Image from 'next/image'
 import person from '../../public/person.jpg'
@@ -21,12 +21,12 @@ const ReadersNav = ({ children }: ReadersNavProps) => {
             <div className=' w-[4rem] sm:w-[5rem] h-screen flex flex-col justify-between items-center p-4 fixed border-r'>
                 <Link href={'/'} >
                     <div className='cursor-pointer  '>
-                        <p className='bg-purple-200 rounded-[5px] text-[20px] font-bold text-purple-800 p-2 w-full flex items-center justify-center'><RiStackshareLine /> </p>
+                        <p className='bg-purple-200 rounded-[5px] text-[20px] font-bold text-purple-800 p-2 w-full flex items-center justify-center'><HiOutlineHome /> </p>
                     </div>
                 </Link>
                 <div className='flex-1 flex flex-col justify-center items-center gap-6 text-2xl text-purple-400'>
-                    <Link href={'/'} className='bg-purple-200 rounded-[5px] text-[20px] font-bold text-purple-800 p-2 w-full flex items-center justify-center'>
-                        <HiOutlineHome />
+                    <Link href={`${currUser ? `/dashboard/${currUser.id}` : '/auth/'}`} className='bg-purple-200 rounded-[5px] text-[20px] font-bold text-purple-800 p-2 w-full flex items-center justify-center'>
+                        <RiDashboardFill />
                     </Link>
 
                     <Link href={`${currUser ? '/dashboard/notification' : '/auth/'}`} className='bg-purple-200 rounded-[5px] text-[20px] font-bold text-purple-800 p-2 w-full flex items-center justify-center'>
