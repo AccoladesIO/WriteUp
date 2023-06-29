@@ -6,7 +6,7 @@ const Bookmarks = () => {
   return (
     <ReadersNav>
     <div className='w-full h-screen flex items-center justify-center'>Bookmarks
-        <CommingSoon />
+        <CommingSoon title='Bookmarks'/>
     </div>
     </ReadersNav>
   )
