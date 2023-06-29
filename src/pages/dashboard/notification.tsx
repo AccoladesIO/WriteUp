@@ -1,12 +1,15 @@
 import CommingSoon from '@/components/CommingSoon'
+import ReadersNav from '@/components/ReadersNav'
 import React from 'react'
 
 const Notification = () => {
   return (
-    <div className='w-full h-screen text-xl'>
+    <ReadersNav>
+    <div className='w-full h-screen text-xl flex items-center justify-center'>
         Notification
         <CommingSoon />    
      </div>
+     </ReadersNav>
   )
 }
 
