@@ -1,5 +1,5 @@
 import Image from 'next/legacy/image'
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import img from '../../public/person.jpg'
 import banner from '../../public/icon.jpg'
 import { AiFillPlayCircle, AiOutlinePlayCircle } from 'react-icons/ai'
@@ -7,8 +7,12 @@ import { AiFillPlayCircle, AiOutlinePlayCircle } from 'react-icons/ai'
 import { FaTwitter, FaGithub } from 'react-icons/fa'
 import { BiBookmark } from 'react-icons/bi'
 import { HiOutlineLink } from 'react-icons/hi'
+import { getDoc, doc } from 'firebase/firestore'
+import { db } from '../../firebase'
 
 function Article({post, author}: any ) {
+    
+    console.log(post)
     return (
         <section className='flex items-start justify-center flex-[3] sm:border-l sm:border-r h-screen'>
             {/* wrapper */}
@@ -20,14 +24,14 @@ function Article({post, author}: any ) {
                         {/* author */}
                         <div className='h-12 w-12 grid center rounded-full overflow-hidden'>
                             {/* author img */}
-                            <Image src={author?.data?.image} alt='' width={100} height={100} className='object-cover' />
+                            <Image src={`https://res.cloudinary.com/demo/image/fetch/${author?.data?.imageUrl}`} alt='' width={100} height={100} className='object-cover' />
                         </div> 
                         <div className='flex flex-col justify-center'>
                             {/* author column and post details */}
                             <div>{author?.data?.name}</div>
                             <div className='flex gap-[.2rem] text-gray-500 flex-wrap'>
                                 {/* post deets */}
-                                <span>June 15 * {post?.data?.postLength} min read</span> <span className='flex items-center text-purple-700'> <AiFillPlayCircle /> Listen</span>
+                                <span> * {post?.data?.postLength} min read</span> <span className='flex items-center text-purple-700'> <AiFillPlayCircle /> Listen</span>
                             </div>
                         </div>
                     </div>

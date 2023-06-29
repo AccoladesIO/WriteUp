@@ -5,19 +5,17 @@ import React from 'react'
 const Footer = () => {
   return (
     <footer aria-label="Site Footer" className="border bg-white lg:grid lg:grid-cols-5">
-  <div className="relative block h-32 lg:col-span-2 lg:h-full">
+  <div className="relative block h-32 lg:col-span-2 lg:h-full ">
     <Image
       src="https://images.unsplash.com/photo-1488190211105-8b0e65b80b4e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80"
       alt=""
       className="absolute inset-0 object-cover w-full h-full"
-      layout='responsive'
-      width={400}
-      height={400}
+      layout='fill'
     />
   </div>
 
   <div className="px-4 py-16 sm:px-6 lg:col-span-3 lg:px-8">
-    <div className="grid grid-cols-1 gap-8 sm:grid-cols-2">
+    <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 mt-4">
       <div>
         <p>
           <span className="text-xs tracking-wide text-gray-500 uppercase">

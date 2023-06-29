@@ -12,15 +12,15 @@ import { WriteUpContext } from '../../context/WriteUpContext'
 const Blog = () => {
   const {posts, users} = useContext(WriteUpContext)
 
-  console.log(users, 'users exists') 
-  console.log(posts, 'Posts exists')
+  // console.log(users, 'users exists') 
+  // console.log(posts, 'Posts exists')
   return (
     <>
       <Heads title='Blog | WriteUp' content='Read the top stories for today' />
       <Navbar />
       <Hero heading={'Stay Curious'} message={'Discover stories, thinking , and expertise from writers on any topic.'} ></Hero>
 
-      <div>
+      <div className='p-4'>
         {
           posts.map((post: any) =>(
             <PostCard  post={post} key={post.id}/>

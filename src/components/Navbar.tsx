@@ -55,7 +55,7 @@ const Navbar = () => {
                     ) :
                         (
                             <li className='p-4'>
-                                <Link href='/dashboard'>Dashboard</Link>
+                                <Link href={`/dashboard/${currUser.uid}`}>Dashboard</Link>
                             </li>
                         )
                     }
@@ -104,7 +104,7 @@ const Navbar = () => {
                             <Link href='/#about'>About</Link>
                         </li>
                         <li className='p-4 hover:text-purple-700 text-purple-400 text-2xl'>
-                                <Link href={`${currUser ? '/dashboard' : '/contact'}`}>{currUser  ? 'Dashboard' : 'Contact'}</Link>
+                                <Link href={`${currUser ? `/dashboard/${currUser.uid}` : '/contact'}`}>{currUser  ? 'Dashboard' : 'Contact'}</Link>
                             </li>
                         <li onClick={handleChange} className='p-4 text-2xl hover:text-purple-700 text-purple-400'>
                             <Link href='/blog'>Blog</Link>

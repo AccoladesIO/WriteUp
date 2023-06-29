@@ -1,21 +1,23 @@
 import Link from 'next/link';
-import React, { useEffect, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import person from '../../public/person.jpg';
 import Image from 'next/legacy/image';
 import img from '../../public/icon.jpg';
 import { doc, getDoc } from 'firebase/firestore';
 import { db } from '../../firebase';
+import { WriteUpContext } from '../../context/WriteUpContext';
 
 type postCardProps = {
   post: any[] | any;
 };
 
 const PostCard = ({ post }: postCardProps) => {
+  
   const [authorData, setAuthorData] = useState<any | null>(null);
 
   useEffect(() => {
     const getAuthorData = async () => {
-      console.log((await getDoc(doc(db, 'users', post.data.author))).data(), 'update')
+      // console.log((await getDoc(doc(db, 'users', post.data.author))).data(), 'update')
       setAuthorData((await getDoc(doc(db, 'users', post.data.author))).data());
     };
     console.log(authorData)
@@ -30,12 +32,12 @@ const PostCard = ({ post }: postCardProps) => {
     : '';
 
   return (
-    <div className='flex justify-between items-center gap-3 flex-col-reverse sm:flex-row p-4 mb-4'>
+    <div className='flex justify-between items-center gap-1 flex-col-reverse sm:flex-row p-2 mb-4 rounded-md border border-purple-400 max-w-[1000px] mx-auto'>
       <Link href={`/post/${post.id}`}>
-        <div className='max-w-[1024px] mx-auto p-8 mt-4 flex flex-col justify-center items-start text-left border gap-3'>
+        <div className=' w-[400px] sm:w-[500px] md:w-[700px] p-2 mt-4 flex flex-col justify-center items-start text-left gap-3'>
           <div className='flex items-center justify-center gap-2 text-left'>
-            <div className=' w-[2.4rem] h-[2.4rem] rounded-full overflow-hidden place-items-center border border-purple-400 relative'>
-              <Image src={`https://res.cloudinary.com/demo/image/fetch/${authorData?.image}`} alt='/' className='object-cover' layout='fill'/>
+            <div className=' w-[2.4rem] h-[2.4rem] rounded-full overflow-hidden place-items-center  relative'>
+              <Image src={`https://res.cloudinary.com/demo/image/fetch/${authorData?.imageUrl}`} alt='/' className='object-cover' layout='fill'/>
             </div>
             <span className='text-[16px] leading-3 font-bold'>{authorData?.name.toUpperCase()}</span>
           </div>

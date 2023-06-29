@@ -13,7 +13,7 @@ const Testimonial = () => {
     }
   return (
     <section>
-    <div className='w-full my-8 p-8 md:px-16 flex items-center justify-center flex-col md:flex-row bg-[lavender] min-h-[400px] gap-6'>
+    <div className='w-full my-8 p-8 md:px-16 flex items-center justify-center flex-col md:flex-row bg-[lavender] min-h-[400px] gap-6 '>
     <div className='border-purple-800 w-full md:w-[50%] relative'>
                 <div className='absolute top-0 left-0 right-0 bottom-0 bg-black/50 z-[-1]'></div>
                 <Image
@@ -43,17 +43,15 @@ const Testimonial = () => {
 
     {/*  */}
 
-    <div className='w-full my-8 p-8 flex items-center justify-center flex-col sm:flex-row  min-h-[400px]'>
-        <div className='w-[200px] h-[200px] sm:w-full'>
-
-        </div>
+    <div className='w-full my-8 p-8 flex items-center justify-center flex-col sm:flex-row  min-h-[400px] bg-purple-200 tes-img bg-fixed bg-center  bg-cover'>
+        
         <div className='flex flex-col gap-2 items-center justify-evenly w-full'>
-            <h2 className='text-3xl font-bold mb-5 text-left'>Write, read and connect with great minds on chatter</h2>
-            <span className='w-full text-left mt-8'>
-                <p>Share people your great ideas, and also read write-ups based on your interests. connect with people of same interests and goals  </p>
+            <h2 className='text-3xl font-bold mb-5 text-center'>Write, read and connect with great minds on chatter</h2>
+            <span className='w-full text-center mt-4'>
+                <p className='mb-4 text-white'>Share people your great ideas, and also read write-ups based on your interests. connect with people of same interests and goals  </p>
                 {
           currUser ? (
-            <button className='px-8 py-2 border-none bg-purple-800 text-white hover:bg-white hover:text-purple-800 ease-in-out duration-300 hover:font-bold rounded-sm'>Get Unlimited Access</button>
+            <button className=' px-8 py-2 border-none bg-purple-800 text-white hover:bg-white hover:text-purple-800 ease-in-out duration-300 hover:font-bold rounded-sm'>Get Unlimited Access</button>
           ):  
           (
             <button onClick={handleRoute} className='px-8 py-2 border-none bg-purple-800 text-white hover:bg-white hover:text-purple-800 ease-in-out duration-300 hover:font-bold rounded-sm'>Get Started</button>

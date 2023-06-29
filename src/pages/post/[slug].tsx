@@ -48,7 +48,7 @@ const Post = () => {
                     <div className="flex flex-col md:flex-row">
 
                         <Article post={post} author={author} />
-                        <Recommendation />
+                        <Recommendation author={author}/>
                     </div>
                 </ReadersNav>
             </div>
