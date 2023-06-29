@@ -6,8 +6,7 @@ const Notification = () => {
   return (
     <ReadersNav>
     <div className='w-full h-screen text-xl flex items-center justify-center'>
-        Notification
-        <CommingSoon />    
+        <CommingSoon title='Notification' />    
      </div>
      </ReadersNav>
   )
