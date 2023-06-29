@@ -6,8 +6,7 @@ const Draft = () => {
   return (
     <ReadersNav>
     <div className='w-full h-full text-xl flex items-center justify-center'>
-        Draft
-        <CommingSoon />
+        <CommingSoon title='Drafts' />
     </div>
     </ReadersNav>
   )
