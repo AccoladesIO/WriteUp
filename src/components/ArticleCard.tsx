@@ -21,9 +21,9 @@ const ArticleCard = (props: articleProps) => {
       // console.log((await getDoc(doc(db, 'users', post.data.author))).data(), 'update')
       setAuthorData((await getDoc(doc(db, 'users', post.data.author))).data());
     };
-    console.log(authorData)
+    // console.log(authorData)
     getAuthorData();
-  }, [post.data.author]);
+  }, []);
 
     return (
         <div className='flex gap-[.6rem] md:flex-col items-center justify-between border-b-2 py-4 pl-2 w-full'>

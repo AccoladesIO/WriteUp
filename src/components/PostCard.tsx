@@ -20,9 +20,9 @@ const PostCard = ({ post }: postCardProps) => {
       // console.log((await getDoc(doc(db, 'users', post.data.author))).data(), 'update')
       setAuthorData((await getDoc(doc(db, 'users', post.data.author))).data());
     };
-    console.log(authorData)
+    // console.log(authorData)
     getAuthorData();
-  }, [post.data.author]);
+  }, []);
 
   const formattedDate = post.data.postedOn
     ? new Date(post.data.postedOn).toLocaleString('en-US', {

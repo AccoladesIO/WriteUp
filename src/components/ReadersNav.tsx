@@ -25,7 +25,7 @@ const ReadersNav = ({ children }: ReadersNavProps) => {
                     </div>
                 </Link>
                 <div className='flex-1 flex flex-col justify-center items-center gap-6 text-2xl text-purple-400'>
-                    <Link href={`${currUser ? `/dashboard/${currUser.id}` : '/auth/'}`} className='bg-purple-200 rounded-[5px] text-[20px] font-bold text-purple-800 p-2 w-full flex items-center justify-center'>
+                    <Link href={`${currUser ? `/dashboard/${currUser.uid}` : '/auth/'}`} className='bg-purple-200 rounded-[5px] text-[20px] font-bold text-purple-800 p-2 w-full flex items-center justify-center'>
                         <RiDashboardFill />
                     </Link>
 

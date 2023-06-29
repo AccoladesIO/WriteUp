@@ -10,7 +10,7 @@ import { BsPencilSquare, BsPeople } from 'react-icons/bs'
 const Index = () => {
 
   const {currUser} = useContext(WriteUpContext)
-  console.log(currUser)
+  console.log(currUser, 'items from dash slug')
   return (
     <>
     <ReadersNav>
