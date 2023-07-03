@@ -15,3 +15,18 @@ html{
   .tes-img{
     background-image: url('https://th.bing.com/th/id/R.f53712094f67e2b09950a2776460b281?rik=oZLurBrff5MtMQ&pid=ImgRaw&r=0');
   }
+
+  /* about.module.css */
+.fade-in {
+  animation: fadeIn 1s ease-in;
+  opacity: 0;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
