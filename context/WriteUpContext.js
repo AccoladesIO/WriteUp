@@ -1,5 +1,5 @@
 import React, { createContext, useState, useEffect } from "react";
-import { collection, getDocs, doc, setDoc, getDoc } from 'firebase/firestore';
+import { collection, getDocs, doc, setDoc} from 'firebase/firestore';
 import { db, auth, provider } from '../firebase';
 import {signInWithPopup, signOut} from 'firebase/auth'
 import { useRouter } from "next/router";
@@ -12,6 +12,7 @@ const WriteProvider = ({ children }) => {
   const router = useRouter()
   const [users, setUsers] = useState([]);
   const [posts, setPosts] = useState([]);
+  const [comments, setComments] = useState([]);
   const [currUser, setCurrUser] =  useState(null)
 
   // const [authorData, setAuthorData] = useState([])
@@ -47,6 +48,8 @@ const WriteProvider = ({ children }) => {
     setUsers(data); 
     // console.log(querySnapshot.docs)
   };
+
+  // get Posts
   const getPosts = async () => {
     const querySnapshot = await getDocs(collection(db, 'articles'))
     const data = querySnapshot.docs.map((snapshotDoc => {
@@ -61,6 +64,20 @@ const WriteProvider = ({ children }) => {
     setPosts(data)
   }
 
+  // get comments
+  const getComments = async () => {
+    const querrySnapshot = await getDocs(collection(db, 'comments'))
+    const data = querrySnapshot.docs.map((doc) => {
+      return {
+        id: doc.id,
+        data: {
+          ...doc.data()
+        }
+      }
+    })
+    setComments(data)
+  }
+
   useEffect(() => {
     getPosts()
   }, [])
@@ -68,6 +85,10 @@ const WriteProvider = ({ children }) => {
   useEffect(() => {
     getUsers();
   }, []);
+
+  useEffect(() => {
+    getComments();
+  }, [])
 
   const handleUserSignOut = async () => {
     await signOut(auth);
@@ -124,14 +145,14 @@ const WriteProvider = ({ children }) => {
     await setDoc(doc(db, 'users', user?.email), {
       email: user.email,
       name: user.displayName,
-      imageUrl: user.photoURL, // Corrected typo: should be `photoURL` instead of `PhotoUrl`
+      imageUrl: user.photoURL, 
       followersCount: 0
     });
   };
    
 
   return (
-    <WriteUpContext.Provider value={{ posts, users, handleUserAuth,  currUser, handleUserSignOut, getUnlimitedAccess}}>
+    <WriteUpContext.Provider value={{ posts, users, handleUserAuth,  currUser, handleUserSignOut, getUnlimitedAccess, comments}}>
       {children}
     </WriteUpContext.Provider>
   );

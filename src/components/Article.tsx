@@ -9,12 +9,17 @@ import { BiBookmark } from 'react-icons/bi'
 import { HiOutlineLink } from 'react-icons/hi'
 import { getDoc, doc } from 'firebase/firestore'
 import { db } from '../../firebase'
+import Comment from './Comment'
+import Link from 'next/link'
 
 function Article({post, author}: any ) {
     
     console.log(post)
     return (
-        <section className='flex items-start justify-center flex-[3] sm:border-l sm:border-r h-screen'>
+        <section className='flex flex-col items-start justify-center flex-[3] sm:border-l sm:border-r h-screen relative'>
+            {/* <span className=' bg-purple-200 p-4 m-4 rounded-lg w-[100px]'>
+                <Link href={'/blog'} className='text-purple text-[14px]'>&larr; Back</Link>
+            </span> */}
             {/* wrapper */}
             <div className='h-screen overflow-scroll p-8 w-full'>
                 {/* content */}
@@ -66,6 +71,7 @@ function Article({post, author}: any ) {
 
                 </div>
 
+            <Comment />
             </div>
         </section>
     )

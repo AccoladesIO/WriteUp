@@ -10,8 +10,8 @@ const About = () => {
   }, []);
 
   return (
-    <section className='max-w-[1024px] mx-auto px-8 md:px-16'>
-      <div className='flex flex-wrap-reverse md:flex-nowrap justify-between items-center p-4 max-w-[1024px] mx-auto min-h-[500px] my-8' id='about' data-aos='fade-up'>
+    <section className='max-w-[1024px] mx-auto px-4 md:px-16'>
+      <div className='flex flex-wrap-reverse md:flex-nowrap justify-between items-center p-2 max-w-[1024px] mx-auto min-h-[500px] my-8' id='about' data-aos='fade-up'>
         <div className='sm:p-8 w-full md:w-[60%]'
          data-aos="fade-up" // Add the data-aos attribute for the fade-in animation
          data-aos-offset="50" // Adjust the offset as per your preference

@@ -12,11 +12,14 @@ export default function Home() {
   return (
     <>
       <Heads title='WriteUp' content='Welcome to WriteUp: A Haven for Text-Based Content' />
+      <div>
+
       <Navbar />
       <Hero heading='Welcome to WriteUp: A Haven for Text-Based Content'  message='Unleash the Power of Words, Connect with Like-minded Readers and Writers' />
       <About />
       <Testimonial />
       <Footer />
+      </div>
     </>
   )
 }

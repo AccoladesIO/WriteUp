@@ -34,7 +34,7 @@ const Navbar = () => {
 
     return (
         <div style={{ background: `${color}` }} className=' drop-shadow-md fixed left-0 top-0 w-full z-10 ease-in duration-300'>
-            <div className='max-w-[1240px] m-auto flex justify-between items-center p-4 text-white'>
+            <div className=' max-w-[1240px] m-auto flex justify-between items-center p-4 text-white'>
                 <Link href='/' >
                     <h1 style={{ color: `${textColor}` }} className='font-bold text-3xl drop-shadow-xl '>WriteUp</h1>
                 </Link>
@@ -88,42 +88,43 @@ const Navbar = () => {
                 </div>
                 {/* Mobile Menu */}
                 <div className={
-                    nav ? 'sm:hidden absolute top-0 left-0 right-[-10%] bottom-0 flex flex-col gap-8 justify-center items-center w-[350px] h-screen bg-white text-left ease-in duration-300' :
+                    nav ? 'sm:hidden absolute top-0 left-0 right-[-10%] bottom-0 flex flex-col gap-8 justify-center items-start w-[350px] h-screen bg-purple-400 pl-4 text-left ease-in duration-300' :
                         'sm:hidden absolute top-0 left-[-100%] right-0 bottom-0 flex flex-col justify-center items-center w-[0] h-screen bg-white text-left ease-in duration-300'
                 }>
-                    <div className='absolute top-[50px] left-[50px] bg-purple-200 p-2 rounded-sm'>
+                    <div className='absolute top-[50px] left-[50px] bg-white p-2 rounded-md font-extrabold'>
                         {
                             nav && <AiOutlineClose size={20} onClick={handleChange} style={{ color: `purple` }} />
                         }
                     </div>
                     <ul>
-                        <li onClick={handleChange} className='p-4 text-2xl hover:text-purple-700 text-purple-400'>
+                        <li onClick={handleChange} className='p-4 text-3xl hover:font-semibold text-white font-bold'>
                             <Link href='/'>Home</Link>
                         </li>
-                        <li onClick={handleChange} className='p-4 text-2xl hover:text-purple-700 text-purple-400'>
+                        <li onClick={handleChange} className='p-4 text-3xl hover:font-semibold text-white font-bold'>
                             <Link href='/#about'>About</Link>
                         </li>
-                        <li className='p-4 hover:text-purple-700 text-purple-400 text-2xl'>
+                        <li className='p-4 text-3xl hover:font-semibold text-white font-bold'>
                                 <Link href={`${currUser ? `/dashboard/${currUser.uid}` : '/contact'}`}>{currUser  ? 'Dashboard' : 'Contact'}</Link>
                             </li>
-                        <li onClick={handleChange} className='p-4 text-2xl hover:text-purple-700 text-purple-400'>
+                        <li onClick={handleChange} className='p-4 text-3xl hover:font-semibold text-white font-bold'>
                             <Link href='/blog'>Blog</Link>
                         </li>
-                    </ul>
-                    {
+                        {
                         currUser ? (
-                            <div className='flex items-center justify-center'>
+                            <div className='flex items-start flex-col justify-center'>
                                 <li className='p-[8px_18px] bg-purple-700 text-white rounded-sm list-none' onClick={handleUserSignOut}>
                                     <Link href='/auth'>Sign Out</Link>
                                 </li>
                             </div>
                         ) :
-                            (<div className='flex items-center justify-center'>
+                            (<div className='flex items-start flex-col justify-center p-4'>
                                 <li className='p-[8px_18px] bg-purple-700 text-white rounded-sm list-none'>
                                     <Link href='/auth'>Sign in</Link>
                                 </li>
                             </div>)
                     }
+                    </ul>
+                    
                     {
                         currUser && (
                             <div className=' w-[2.4rem] h-[2.4rem] rounded-full overflow-hidden place-items-center border border-purple-400 relative'>

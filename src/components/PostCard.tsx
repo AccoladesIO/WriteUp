@@ -12,7 +12,7 @@ type postCardProps = {
 };
 
 const PostCard = ({ post }: postCardProps) => {
-  
+
   const [authorData, setAuthorData] = useState<any | null>(null);
 
   useEffect(() => {
@@ -26,20 +26,20 @@ const PostCard = ({ post }: postCardProps) => {
 
   const formattedDate = post.data.postedOn
     ? new Date(post.data.postedOn).toLocaleString('en-US', {
-        day: 'numeric',
-        month: 'short',
-      })
+      day: 'numeric',
+      month: 'short',
+    })
     : '';
 
   return (
     <div className='flex justify-between items-center gap-1 flex-col-reverse sm:flex-row p-2 mb-4 rounded-md border border-purple-400 max-w-[1000px] mx-auto'>
       <Link href={`/post/${post.id}`}>
-        <div className=' w-[400px] sm:w-[500px] md:w-[700px] p-2 mt-4 flex flex-col justify-center items-start text-left gap-3'>
+        <div className=' w-[350px] sm:w-[500px] md:w-[700px] p-2 mt-4 flex flex-col justify-center items-start text-left gap-3'>
           <div className='flex items-center justify-center gap-2 text-left'>
             <div className=' w-[2.4rem] h-[2.4rem] rounded-full overflow-hidden place-items-center  relative'>
-              <Image src={`https://res.cloudinary.com/demo/image/fetch/${authorData?.imageUrl}`} alt='/' className='object-cover' layout='fill'/>
+              <Image src={`https://res.cloudinary.com/demo/image/fetch/${authorData?.imageUrl}`} alt='/' className='object-cover' layout='fill' />
             </div>
-            <span className='text-[16px] leading-3 font-bold'>{authorData?.name.toUpperCase()}</span>
+            <span className='text-[16px] leading-3 font-bold'>{authorData?.name}</span>
           </div>
           <h1 className='text-2xl font-bold text-left mt-4'>{post?.data?.title}</h1>
           <p className='text-[16px] font-light text-gray-400 text-left mt-2'>{post?.data?.brief}</p>
@@ -50,15 +50,15 @@ const PostCard = ({ post }: postCardProps) => {
         </div>
       </Link>
 
-      <div className='flex justify-center items-start sm:items-center w-[400px] sm:w-[200px] mx-auto border border-purple-300 mt-4 h-[200px] relative'>
-      <Image
-  src={`https://res.cloudinary.com/demo/image/fetch/${post.data.bannerImage}`}
-  alt="Banner Image"
-  height={100}
-  width={100}
-  className="object-cover"
-  layout="fill"
-/>
+      <div className='flex justify-center items-start sm:items-center w-[350px] sm:w-[200px] mx-auto border border-purple-300 mt-4 h-[200px] relative'>
+        <Image
+          src={`https://res.cloudinary.com/demo/image/fetch/${post.data.bannerImage}`}
+          alt="Banner Image"
+          height={100}
+          width={100}
+          className="object-cover"
+          layout="fill"
+        />
       </div>
     </div>
   );

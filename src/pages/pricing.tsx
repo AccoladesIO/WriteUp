@@ -2,7 +2,7 @@ import React from 'react'
 
 const Pricing = () => {
   return (
-    <div>Pricing</div>
+    <div className='w-full h-full text-xl flex items-center justify-center'>Pricing Coming soon!</div>
   )
 }
 

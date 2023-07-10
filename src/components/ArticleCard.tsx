@@ -38,7 +38,7 @@ const ArticleCard = (props: articleProps) => {
                             <Image src={`https://res.cloudinary.com/demo/image/fetch/${authorData?.imageUrl}`} width={100} height={100} alt='' />
                         </div>
 
-                        <div className='text-sm '>{authorData?.name.toUpperCase()}</div>
+                        <div className='text-sm '>{authorData?.name}</div>
                     </div>
                     <div className='font-bold text-[16px]'>{post?.data?.title}</div>
                 </div>
