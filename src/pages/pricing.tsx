@@ -1,8 +1,12 @@
+import Navbar from '@/components/Navbar'
 import React from 'react'
 
 const Pricing = () => {
   return (
-    <div className='w-full h-full text-xl flex items-center justify-center'>Pricing Coming soon!</div>
+    <>
+      <Navbar />
+      <div className='w-full h-full text-xl flex items-center justify-center bg-purple-200'>Pricing Coming soon!</div>
+    </>
   )
 }
 
