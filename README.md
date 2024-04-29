@@ -79,14 +79,10 @@ Before running the Write Up app, make sure you have the following installed on y
 - Click on the "Sign Up" button and provide the required details to create a new account.
 
 ### Writing a New Post
-- After logging in, click on the "New Post" button in the navigation bar.
+- After logging in, click on the "Dashboard" button in the navigation bar.
+- Click on the write icon in the navigation bar.
 - Fill in the post details such as title, content, and any relevant tags.
 - Click the "Submit" button to publish your post.
-
-### Editing and Deleting Posts
-- Go to "My Posts" in the navigation bar to see your published posts.
-- Click on the "Edit" button to make changes to a post.
-- To delete a post, click on the "Delete" button.
 
 ### Commenting on Posts
 - Navigate to the post you want to comment on.
@@ -100,15 +96,4 @@ Before running the Write Up app, make sure you have the following installed on y
 ## 4. Admin Guide <a name="admin-guide"></a>
 
 ### Managing User Accounts
-- Admin users can access the admin panel by logging in with admin credentials.
-- In the admin panel, you can view and manage user accounts.
-- Perform actions such as banning users, resetting passwords, or granting admin privileges.
-
-### Content Moderation
-- Admins can moderate the content created by users.
-- Access flagged posts and comments to review and take appropriate actions, such as removing or warning users.
-
-### Analytics and Metrics
-- Track app usage and user engagement through Firebase Analytics.
-- Gain insights into popular posts, user demographics, and other essential metrics.
-
+- Coming soon.
