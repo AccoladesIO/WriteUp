@@ -29,7 +29,7 @@ function Article({post, author}: any ) {
                         {/* author */}
                         <div className='h-12 w-12 grid center rounded-full overflow-hidden'>
                             {/* author img */}
-                            <Image src={`https://res.cloudinary.com/demo/image/fetch/${author?.data?.imageUrl}`} alt='' width={100} height={100} className='object-cover' />
+                            <Image src={`${author?.data?.imageUrl}`} alt='' width={100} height={100} className='object-cover' />
                         </div> 
                         <div className='flex flex-col justify-center'>
                             {/* author column and post details */}
@@ -51,7 +51,7 @@ function Article({post, author}: any ) {
                 </div>
                 <div className='--c-article flex flex-col gap-4'>
                     <div className='--c-banner h-[18rem] w-full grid center overflow-hidden mb-8'>
-                        <Image src={`https://res.cloudinary.com/demo/image/fetch/${post?.data?.bannerImage}`} alt='/' height={100} width={100} className='object-cover' />
+                        <Image src={`${post?.data?.bannerImage}`} alt='/' height={100} width={100} className='object-cover' />
                     </div>
                     <h1 className="styles-title font-bold text-3xl ">
                         {post?.data?.title}

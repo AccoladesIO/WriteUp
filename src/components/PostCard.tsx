@@ -37,7 +37,7 @@ const PostCard = ({ post }: postCardProps) => {
         <div className=' w-[350px] sm:w-[500px] md:w-[700px] p-2 mt-4 flex flex-col justify-center items-start text-left gap-3'>
           <div className='flex items-center justify-center gap-2 text-left'>
             <div className=' w-[2.4rem] h-[2.4rem] rounded-full overflow-hidden place-items-center  relative'>
-              <Image src={`https://res.cloudinary.com/demo/image/fetch/${authorData?.imageUrl}`} alt='/' className='object-cover' layout='fill' />
+              <Image src={`${authorData?.imageUrl}`} alt='/' className='object-cover' layout='fill' />
             </div>
             <span className='text-[16px] leading-3 font-bold'>{authorData?.name}</span>
           </div>
@@ -52,7 +52,7 @@ const PostCard = ({ post }: postCardProps) => {
 
       <div className='flex justify-center items-start sm:items-center w-[350px] sm:w-[200px] mx-auto border border-purple-300 mt-4 h-[200px] relative'>
         <Image
-          src={`https://res.cloudinary.com/demo/image/fetch/${post.data.bannerImage}`}
+          src={`${post.data.bannerImage}`}
           alt="Banner Image"
           height={100}
           width={100}

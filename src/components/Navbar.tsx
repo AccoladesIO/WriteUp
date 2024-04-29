@@ -67,7 +67,7 @@ const Navbar = () => {
                                 <Link href='/auth' >Sign Out</Link>
                             </li>
                             <div className=' w-[2.4rem] h-[2.4rem] rounded-full overflow-hidden place-items-center border border-purple-400 relative'>
-                            <Image src={`https://res.cloudinary.com/demo/image/fetch/${currUser.photoURL}`} alt='/' className='object-cover' layout='fill' />
+                            <Image src={`${currUser.photoURL}`} alt='/' className='object-cover' layout='fill' />
                         </div>
                         </div>
                     ) :
@@ -128,7 +128,7 @@ const Navbar = () => {
                     {
                         currUser && (
                             <div className=' w-[2.4rem] h-[2.4rem] rounded-full overflow-hidden place-items-center border border-purple-400 relative'>
-                                <Image src={`https://res.cloudinary.com/demo/image/fetch/${currUser.photoURL}`} alt='/' className='object-cover' layout='fill' />
+                                <Image src={`${currUser.photoURL}`} alt='/' className='object-cover' layout='fill' />
                             </div>
                         )
                     }

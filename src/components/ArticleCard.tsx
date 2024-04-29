@@ -35,7 +35,7 @@ const ArticleCard = (props: articleProps) => {
                     <div className='flex flex-row justify-center items-center gap-2'>
 
                         <div className='rounded-full overflow-hidden h-[1.4rem] w-[1.4rem]'>
-                            <Image src={`https://res.cloudinary.com/demo/image/fetch/${authorData?.imageUrl}`} width={100} height={100} alt='' />
+                            <Image src={`${authorData?.imageUrl}`} width={100} height={100} alt='' />
                         </div>
 
                         <div className='text-sm '>{authorData?.name}</div>

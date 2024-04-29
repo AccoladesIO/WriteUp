@@ -65,7 +65,7 @@ const CommentList = (props: CommentListProps) => {
         return (
           <div key={comment.id} className='w-[300px] mt-2 p-4 border border-b border-t-0 border-l-0 border-r-o flex items-center justify-center'>
             <span className='w-[50px] h-[50px] rounded-full relative gap-2'>
-              <Image src={`https://res.cloudinary.com/demo/image/fetch/${authorData.imageUrl}`} width={40} height={40} className='object-cover'/>
+              <Image src={`${authorData.imageUrl}`} width={40} height={40} className='object-cover'/>
             </span>
             <p className='text-[14px] text-gray-500'>
             {comment.data.body} {/* Access the 'body' property directly */}

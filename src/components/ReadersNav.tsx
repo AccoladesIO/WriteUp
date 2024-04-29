@@ -54,7 +54,7 @@ const ReadersNav = ({ children }: ReadersNavProps) => {
                         <div className='flex flex-col gap-2 items-center justify-center'>
                         <div className=' w-[2.4rem] h-[2.4rem] rounded-full overflow-hidden place-items-center border border-purple-400 relative '>
                             <Link href={'/dashboard/' } >
-                            <Image src={`https://res.cloudinary.com/demo/image/fetch/${currUser.photoURL}`} alt='/' className='object-cover' layout='fill' />
+                            <Image src={`${currUser.photoURL}`} alt='/' className='object-cover' layout='fill' />
                             </Link>
                         </div>
                         <Link href={'/dashboard/write'} className='bg-purple-200 rounded-[5px] text-[20px] font-bold text-purple-800 p-2 w-full flex items-center justify-center'>
